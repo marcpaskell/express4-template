@@ -7,22 +7,30 @@
   </div>
 
   <div class="row">
-    <div class="large-12 columns">
-			<form action="/blog/create" method="post" accept-charset="utf-8">
-			  <textarea name="content"></textarea>
-			  <input type="submit" class="small button success right">
-			</form>
-		</div>
-	</div>
 
-  <div class="row">
-    <div class="large-12 columns">
+    <div class="medium-6 columns">
+    	<div class="panel callout">
+    		<p>Create a new post...</p>
+				<form action="/blog/create" method="post" accept-charset="utf-8">
+				  <textarea name="content"></textarea>
+				  <input type="submit" class="small button right">
+				</form>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+    <div class="medium-6 columns">
 
     	{{#each posts}}
-		  	<div class="panel">{{content}}</div>
+		  	<div class="panel">
+		  		<p>{{content}}</p>
+		  		<a href="/blog/remove/{{_id}}" class="tiny radius button right alert">Remove</a>
+		  		<div class="clear"></div>
+		  	</div>
 		  {{else}}
 		  	<p>No posts</p>
 		  {{/each}}
 		  
 	  </div>
+
   </div>

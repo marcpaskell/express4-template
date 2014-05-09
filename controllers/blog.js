@@ -1,16 +1,15 @@
 var Post = require('../models/post');
 
+
 exports.list = function (req, res) {
-
-	Post.find(function (err, posts, count) {
-		res.render('blog', {
-			title: 'New Blog!!!',
-			description: 'Awesome blog',
-			posts: posts,
-			postCount: count
-		});
-	});
-
+  Post.find().sort('-updated').exec(function (err, posts, count) {
+			res.render('blog', {
+				title: 'New Blog!!!',
+				description: 'Awesome blog',
+				posts: posts,
+				postCount: count
+			});
+    });
 };
 
 exports.create = function (req, res) {
@@ -22,4 +21,13 @@ exports.create = function (req, res) {
     res.redirect('/blog');
   });
 
+};
+
+exports.remove = function (req, res) {
+
+  Post.findById(req.params.id, function (err, post) {
+    post.remove(function (err, post) {
+      res.redirect('/blog');
+    });
+  });
 };

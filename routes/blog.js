@@ -18,7 +18,8 @@ router.route('/')
   .all(controller.list);
 router.route('/create')
 	.post(controller.create);
-
+router.route('/remove/:id')
+	.get(controller.remove);
 
 
 exports.router = router;
