@@ -1,0 +1,20 @@
+{{!< layout}}
+
+    <div class="row">
+      <div class="large-12 columns">
+			  <h1>{{title}}</h1>
+			  <h3>{{description}}</h5>
+		  </div>
+	  </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+
+      	{{#each posts}}
+			  	<div class="panel">{{content}}</div>
+			  {{else}}
+			  	<p>No posts</p>
+			  {{/each}}
+			  
+		  </div>
+	  </div>

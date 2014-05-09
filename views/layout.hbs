@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="css/app.min.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    {{#ifvalue settings.env value="development"}}
+      <script src="http://localhost:35729/livereload.js"></script>
+    {{/ifvalue}}
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>{{title}}</h1>
+      </div>
+    </div>
+    <hr />
+
+    {{{body}}}
+    
+    <hr />
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel callout">
+          <small>Env: {{settings.env}}</small>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "~4.0.0-rc2",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "compression": "1.0.1",
+    "static-favicon": "~1.0.1",
+    "method-override": "~1.0.0",
+    "errorhandler": "~1.0.0",
+    "express-hbs": "~0.7.9",
+    "mongoose": "~3.8.7"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-node-inspector": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "matchdep": "~0.3.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-sass": "~0.7.2",
+    "time-grunt": "^0.3.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-express-server": "^0.4.17"
+  }
+}
