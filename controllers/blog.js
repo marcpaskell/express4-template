@@ -1,6 +1,6 @@
 var Post = require('../models/post');
 
-exports.blog = function (req, res) {
+exports.list = function (req, res) {
 
 	Post.find(function (err, posts, count) {
 		res.render('blog', {
@@ -10,5 +10,16 @@ exports.blog = function (req, res) {
 			postCount: count
 		});
 	});
+
+};
+
+exports.create = function (req, res) {
+
+  new Post({
+    content: req.body.content,
+    updated: Date.now()
+  }).save(function (err, post, count) {
+    res.redirect('/blog');
+  });
 
 };

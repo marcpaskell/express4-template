@@ -13,7 +13,12 @@ var router = express.Router();
 /**
  * this accepts all request methods to the `/` path
  */
+
 router.route('/')
-  .all(controller.blog);
+  .all(controller.list);
+router.route('/create')
+	.post(controller.create);
+
+
 
 exports.router = router;
