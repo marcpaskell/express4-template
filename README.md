@@ -17,4 +17,3 @@ bower install (from public dir
 grunt - build, test etc
 
 grunt start
-	localhost:3000
