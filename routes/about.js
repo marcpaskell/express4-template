@@ -2,7 +2,7 @@
  * Module dependencies
  */
 var express = require('express'),
-    controller = require('../controllers/about');
+    controller = require('../controllers/About');
 
 console.log('about router start');
 

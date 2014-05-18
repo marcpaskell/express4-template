@@ -2,23 +2,31 @@
  * Module dependencies.
  */
 
-var express        = require('express'),
-    path           = require('path'),
-    mongoose       = require('mongoose'),
-    hbs            = require('express-hbs'),
-    logger         = require('morgan'),
-    bodyParser     = require('body-parser'),
-    compress       = require('compression'),
-    favicon        = require('static-favicon'),
-    methodOverride = require('method-override'),
-    errorHandler   = require('errorhandler'),
-    config         = require('./config');
+var express         = require('express'),
+    path            = require('path'),
+    mongooseModels  = require('mongoose-models'),
+    hbs             = require('express-hbs'),
+    logger          = require('morgan'),
+    bodyParser      = require('body-parser'),
+    compress        = require('compression'),
+    favicon         = require('static-favicon'),
+    methodOverride  = require('method-override'),
+    errorHandler    = require('errorhandler'),
+    config          = require('./config')();
 
+mongooseModels.init({
+    url: config.database.url,
+    types: [ 'email', 'url', 'uuid' ],
+    modelPath: './models'
+  });
 
+/*
 mongoose.connect(config.database.url);
+
 mongoose.connection.on('error', function () {
-  console.log('mongodb connection error');
-});
+    console.log('mongodb connection error');
+  });
+*/
 
 console.log('app.js start');
 

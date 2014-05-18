@@ -1,5 +1,9 @@
 {
   "name": "test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squalli2008/express4-template.git"
+  },
   "version": "0.0.0",
   "dependencies": {
     "express": "~4.0.0-rc2",
@@ -10,7 +14,9 @@
     "method-override": "~1.0.0",
     "errorhandler": "~1.0.0",
     "express-hbs": "~0.7.9",
-    "mongoose": "~3.8.7"
+    "mongoose": "~3.8.7",
+    "mongoose-models": "~0.3.1",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -25,6 +31,7 @@
     "grunt-contrib-sass": "~0.7.2",
     "time-grunt": "^0.3.1",
     "grunt-contrib-clean": "^0.5.0",
-    "grunt-express-server": "^0.4.17"
+    "grunt-express-server": "^0.4.17",
+    "jasmine-node": "~1.14.3"
   }
 }

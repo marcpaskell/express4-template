@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         mangle: {
           except: ['jQuery']
         },
-        report: 'min',
+        report: 'min'
       },
       dist: {
         files: {
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
         livereload: 35729
       },
       all: {
-        files: ['public/**/*', 'views/**', '!**/node_modules/**', '!public/vendor/**/*', '!**/*.min.*'],
+        files: ['public/**/*', 'views/**', '!**/node_modules/**', '!public/vendor/**/*', '!**/*.min.*']
       },
       gruntfile: {
         files: 'Gruntfile.js',
@@ -125,13 +125,13 @@ module.exports = function (grunt) {
     //used to start exprss server and in conjunction with livereload
     express: {
       options: {
-        debug: true,
+        debug: true
       },
       web: {
         options: {
-          script: 'app.js',
+          script: 'app.js'
         }
-      },
+      }
     },
 
     concurrent: {
@@ -143,7 +143,9 @@ module.exports = function (grunt) {
       }
 
     }
+
   };
+
 
   // show elapsed time at the end
   require('time-grunt')(grunt);
@@ -160,4 +162,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['test', 'release']);
 
   grunt.registerTask('start', ['concurrent']);
+
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 };
